@@ -5,13 +5,21 @@
 .clients__list{
     display: flex;
 }
-.clients__item:not(:last-child){
+.clients__item{
+&:not(:last-child){
     margin-right: 30px;
 }
+}
+
 
 .clients__icon{
     fill:var(--bord-color);
     transition: fill  var(--duration) var(--timing-function);
+
+   .clients__link:hover &,
+   .clients__link:focus &{
+    fill: var(--akcent-color);
+}
 }
 .clients__link{
     height: 92px;
@@ -22,12 +30,10 @@
     justify-content: center;
     align-items: center;
     transition: border  var(--duration) var(--timing-function);
-}
-.clients__link:hover,
-.clients__link:focus{
+
+    &:hover,
+    &:focus{
     border-color:var(--akcent-color);
 }
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon{
-    fill: var(--akcent-color);
 }
+

@@ -1,13 +1,15 @@
 .skills__list{
     display: flex;
 }
-.skills__item:not(:last-child){
-    margin-right: 30px;
-}
+
 .skills__item{
 width: 270px;
+
+   &:not(:last-child){
+    margin-right: 30px;
 }
-.skills__list .skills__title{
+}
+ .skills__title{
 font-weight: 700;
 font-size: 14px;
 line-height: 1.14;
@@ -17,7 +19,7 @@ margin-top: 0%;
 margin-bottom: 10px;
 color: var(--primary-text-color);
 }
-.skills__list .description{
+.description{
 font-weight: 400;
 font-size: 14px;
 line-height: 1.71;

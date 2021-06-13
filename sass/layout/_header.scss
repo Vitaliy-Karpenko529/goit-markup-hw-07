@@ -31,9 +31,12 @@
     display: flex;
 
 }
-.nav__item:not(:last-child){
+.nav__item{
+&:not(:last-child){
     margin-right: 50px;
 }
+}
+
 .nav__link{
 display: block;
 font-weight: 500;
@@ -45,15 +48,17 @@ padding-top: 32px;
 padding-bottom: 32px;
 transition: color var(--duration) var(--timing-function);
 position: relative;
-}
-.nav__list .nav__link.current{
-     color: var(--akcent-color);
-}
-.nav__link:hover,
-.nav__link:focus{
+
+    &:hover,
+    &:focus{
     color: var(--akcent-color);
 }
-.nav__link.current::after{
+
+}
+ .nav__link.current{
+     color: var(--akcent-color);
+     
+     &.current::after{
     content:"";
     position: absolute;
     left:0;
@@ -63,26 +68,27 @@ position: relative;
     height: 4px;
     border-radius: 2px;
     background-color: var(--akcent-color);
-}
- .nav__link.current::after{
     transform: scaleX(1);
     transition: transform  var(--duration) var(--timing-function);
 }
-.nav__link.current:hover::after,
-.nav__link.current:focus::after{
+    &.current:hover::after,
+    &.current:focus::after{
     transform: scaleX(0.4);
 } 
+
+}
+
+
+
+
 /*Контакты*/
 .contacts__list{
     display: flex;
     margin-left: auto;
     padding-top: 32px;
     padding-bottom: 32px;
-}
-.contacts__item:not(:last-child){
-    margin-right: 50px;
-}
-.contacts__list a{
+    
+    & a{
 display: flex;
 align-items: center;
 font-weight: 500;
@@ -93,15 +99,29 @@ text-decoration: none;
 color:var(--primary-description-color);
 transition: color  var(--duration) var(--timing-function);
 }
-.contacts__item a:hover,
-.contacts__item a:focus{
+
+}
+
+.contacts__item{
+    &:not(:last-child){
+    margin-right: 50px;
+}
+       & a:hover,
+       & a:focus{
     color: var(--akcent-color);
 }
-.contacts__icon:hover,
-.contacts__icon:focus{
-    color: var(--akcent-color);
 }
+
+
+
+
+
 .contacts__icon{
 margin-right: 10px;
 fill:currentColor;
+   &:hover,
+   &:focus{
+    color: var(--akcent-color);
+}
+
 }

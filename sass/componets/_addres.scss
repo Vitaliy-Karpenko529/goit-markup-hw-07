@@ -1,4 +1,12 @@
-.addres__list .addres__map{
+
+.addres__item{
+    &:not(:last-child){
+    margin-bottom: 9px;
+}
+
+}
+
+.addres__map{
 font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
@@ -6,12 +14,14 @@ font-style: normal;
 letter-spacing: 0.03em;
 color: var(--primary-navigation-color);
 transition: color  var(--duration) var(--timing-function);
-}
-.addres__map:hover,
-.addres__map:focus{
+
+&:hover,
+&:focus{
     color:var(--akcent-color);
 }
-.addres__list .addres__link{
+}
+
+ .addres__link{
 font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
@@ -19,11 +29,10 @@ letter-spacing: 0.03em;
 font-style: normal;
 color: var(--adres-color);
 transition: color  var(--duration) var(--timing-function);
-}
-.addres__link:hover,
-.addres__link:focus{
+
+&:hover,
+&:focus{
     color:var(--akcent-color);
 }
-.addres__item:not(:last-child){
-    margin-bottom: 9px;
 }
+

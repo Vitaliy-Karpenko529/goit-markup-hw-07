@@ -4,10 +4,12 @@
 .services__list{
     display: flex;
 }
-.services__item:not(:last-child){
+
+.services__item{
+   &:not(:last-child){
     margin-right: 30px;
 }
-
+}
 .services__wrapper{
     position: relative;
 }
