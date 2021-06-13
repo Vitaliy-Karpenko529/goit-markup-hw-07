@@ -121,7 +121,9 @@ pointer-events: none;
     padding-top: 24px;
     padding-bottom: 25px;
     color: var(--akcent-color);
-    margin-right: 93px;
+}
+.nav__list_margin{
+    margin-left: 93px;
 }
 .nav__studio{
     color: var(--logo-studio-link-color); 
